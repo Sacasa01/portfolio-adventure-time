@@ -1,0 +1,78 @@
+<section id="hero" class="section-full hero-section">
+  <!-- Subtle background grid lines for Japanese minimalist layout -->
+  <div class="bg-grid">
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+  </div>
+
+  <div class="container hero-container">
+    <div class="hero-grid">
+      <!-- Left Column: Content -->
+      <div class="hero-content" appScrollReveal animationClass="reveal-fade-up">
+        <span class="greeting">{{ 'HERO.GREETING' | translate }}</span>
+        <h1 class="name">Santiago Castro Salt</h1>
+        <h2 class="role">{{ 'HERO.ROLE' | translate }}</h2>
+        <p class="tagline">{{ 'HERO.TAGLINE' | translate }}</p>
+        
+        <div class="cta-group">
+          <a href="#contact" class="btn btn-primary btn-cta" (click)="scrollToContact($event)">
+            {{ 'HERO.CTA' | translate }}
+            <!-- Minimal arrow icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="btn-arrow">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Visual Frame -->
+      <div class="hero-visual" appScrollReveal animationClass="reveal-fade-in" staggerClass="stagger-2">
+        <div class="frame-container">
+          <!-- Japanese red sun/accent circle behind frame -->
+          <div class="accent-circle"></div>
+          
+          <div class="photo-frame">
+            <!-- Image placeholder showing how to put their photo -->
+            <picture>
+              <source srcset="photos/hero/hero.webp" type="image/webp">
+              <img src="photos/hero/hero.jpg" alt="Santiago Castro Salt" class="hero-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <!-- Visual placeholder when photo is missing -->
+              <div class="photo-placeholder">
+                <div class="placeholder-art">
+                  <!-- Abstract minimalist Japanese outline sword (suttle Finn's sword reference) -->
+                  <svg viewBox="0 0 100 100" fill="none" class="sword-svg">
+                    <!-- Blade -->
+                    <path d="M50 15 L53 35 L53 70 L47 70 L47 35 Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                    <!-- Crossguard -->
+                    <path d="M35 70 L65 70 L65 74 L35 74 Z" fill="currentColor"></path>
+                    <!-- Grip & Pommel -->
+                    <rect x="48" y="74" width="4" height="12" fill="currentColor"></rect>
+                    <circle cx="50" cy="88" r="3" fill="currentColor"></circle>
+                    <!-- Suttle glowing elements -->
+                    <circle cx="50" cy="25" r="1.5" fill="var(--accent-primary)"></circle>
+                    <line x1="50" y1="5" x2="50" y2="10" stroke="var(--accent-primary)" stroke-width="1.5" stroke-linecap="round"></line>
+                  </svg>
+                </div>
+                <span class="placeholder-text">public/photos/hero/hero.jpg</span>
+              </div>
+            </picture>
+          </div>
+          
+          <!-- Suttle floating star/spark decoration (Adventure Time inspired spark) -->
+          <div class="spark-decor decor-top">✦</div>
+          <div class="spark-decor decor-bottom">✦</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Down Indicator -->
+  <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+    <span class="scroll-text">{{ 'HERO.SCROLL_DOWN' | translate }}</span>
+    <div class="scroll-mouse">
+      <div class="scroll-wheel"></div>
+    </div>
+  </a>
+</section>
