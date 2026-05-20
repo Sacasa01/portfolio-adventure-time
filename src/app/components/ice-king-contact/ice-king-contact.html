@@ -1,0 +1,115 @@
+<div class="ice-container">
+  <!-- Snow particles -->
+  <div class="snowflakes">
+    <div class="snowflake s1"></div>
+    <div class="snowflake s2"></div>
+    <div class="snowflake s3"></div>
+    <div class="snowflake s4"></div>
+    <div class="snowflake s5"></div>
+  </div>
+
+  <div class="ice-header">
+    <h1 class="ice-title">EL REINO DE HIELO</h1>
+    <p class="ice-subtitle">¿Tienes alguna pregunta o propuesta? Envía un mensaje congelado.</p>
+  </div>
+
+  <div class="ice-layout">
+    <!-- Contact Form (Ice Box) -->
+    <div class="contact-box glass-panel float-anim">
+      @if (!isSent()) {
+        <form (submit)="onSubmit($event)" class="contact-form">
+          <div class="form-group">
+            <label for="name">Nombre Héroe / Heroína:</label>
+            <input type="text" id="name" name="name" [ngModel]="name()" (ngModelChange)="name.set($event)" required placeholder="Finn el Humano">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Paloma Mensajera (Email):</label>
+            <input type="email" id="email" name="email" [ngModel]="email()" (ngModelChange)="email.set($event)" required placeholder="finn@ooo.com">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Pergamino (Mensaje):</label>
+            <textarea id="message" name="message" [ngModel]="message()" (ngModelChange)="message.set($event)" required rows="4" placeholder="Escribe aquí tu aventura..."></textarea>
+          </div>
+
+          <button type="submit" class="adventure-btn freeze-btn">
+            <span>❄️ ¡Congelar y Enviar!</span>
+          </button>
+        </form>
+      } @else {
+        <!-- Success Message -->
+        <div class="success-screen">
+          <div class="frozen-block">
+            <span class="frozen-icon">🧊</span>
+            <h2 class="frozen-title">¡Mensaje Congelado!</h2>
+            <p class="frozen-desc">Tu mensaje ha sido encerrado en un bloque de hielo mágico y enviado con éxito al correo del Rey Hielo.</p>
+          </div>
+        </div>
+      }
+    </div>
+
+    <!-- Gunter and Ice King side elements -->
+    <div class="ice-characters">
+      <!-- Gunter -->
+      <div class="gunter-wrapper" (click)="clickGunter()">
+        @if (gunterText() !== '') {
+          <div class="gunter-bubble">
+            <p>{{ gunterText() }}</p>
+          </div>
+        }
+        <div class="gunter-graphic float-anim">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Body (Black back, White belly) -->
+            <ellipse cx="50" cy="55" rx="30" ry="40" fill="#1d1e22" stroke="#000" stroke-width="4"/>
+            <ellipse cx="50" cy="62" rx="20" ry="30" fill="#FFFFFF" stroke="#000" stroke-width="3"/>
+            
+            <!-- Eyes (Gunter's tiny black dots on white) -->
+            <circle cx="42" cy="38" r="8" fill="#FFFFFF" stroke="#000" stroke-width="2"/>
+            <circle cx="58" cy="38" r="8" fill="#FFFFFF" stroke="#000" stroke-width="2"/>
+            <!-- Normal pupils vs green glowing in Lich mode -->
+            <circle cx="42" cy="38" r="3.5" fill="#000" class="gunter-pupil"/>
+            <circle cx="58" cy="38" r="3.5" fill="#000" class="gunter-pupil"/>
+            <circle cx="42" cy="38" r="1.5" fill="#39ff14" class="gunter-spooky-pupil"/>
+            <circle cx="58" cy="38" r="1.5" fill="#39ff14" class="gunter-spooky-pupil"/>
+
+            <!-- Beak -->
+            <polygon points="46,45 54,45 50,55" fill="#FFA000" stroke="#000" stroke-width="3"/>
+
+            <!-- Flippers (Arms) -->
+            <path d="M22 45 Q10 60 20 70" stroke="#1d1e22" stroke-width="12" fill="none" stroke-linecap="round"/>
+            <path d="M78 45 Q90 60 80 70" stroke="#1d1e22" stroke-width="12" fill="none" stroke-linecap="round"/>
+
+            <!-- Feet -->
+            <ellipse cx="38" cy="92" rx="10" ry="5" fill="#FFA000" stroke="#000" stroke-width="3"/>
+            <ellipse cx="62" cy="92" rx="10" ry="5" fill="#FFA000" stroke="#000" stroke-width="3"/>
+          </svg>
+        </div>
+        <span class="gunter-label">Gunter</span>
+      </div>
+
+      <!-- Ice King (Background silhouette or face) -->
+      <div class="ice-king-bg float-anim">
+        <svg viewBox="0 0 120 150" xmlns="http://www.w3.org/2000/svg">
+          <!-- Ice King Beard -->
+          <path d="M10 60 L110 60 L100 140 L60 150 L20 140 Z" fill="#E0F7FA" stroke="#000" stroke-width="4"/>
+          <!-- Ice King Face -->
+          <path d="M40 30 Q60 50 80 30 L80 60 L40 60 Z" fill="#80DEEA" stroke="#000" stroke-width="3"/>
+          <!-- Long Nose -->
+          <polygon points="50,45 75,52 50,55" fill="#80DEEA" stroke="#000" stroke-width="2.5"/>
+          <!-- Crown -->
+          <polygon points="35,30 45,5 60,18 75,5 85,30" fill="#FFD54F" stroke="#000" stroke-width="4"/>
+          <!-- Crown Jewels -->
+          <circle cx="45" cy="20" r="3" fill="#D50000"/>
+          <circle cx="60" cy="24" r="3" fill="#D50000"/>
+          <circle cx="75" cy="20" r="3" fill="#D50000"/>
+          <!-- Angry Eyes -->
+          <path d="M46 38 L54 41" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+          <path d="M74 38 L66 41" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="50" cy="43" r="1.5" fill="#000"/>
+          <circle cx="70" cy="43" r="1.5" fill="#000"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
