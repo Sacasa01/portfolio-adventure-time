@@ -1,0 +1,126 @@
+.experience-section {
+  position: relative;
+  background-color: var(--bg-secondary); /* Alternating background */
+  transition: background-color var(--transition-normal);
+}
+
+.timeline-container {
+  position: relative;
+  margin-top: var(--spacing-lg);
+  padding-left: 35px;
+}
+
+@media (min-width: 768px) {
+  .timeline-container {
+    padding-left: 50px;
+  }
+}
+
+/* Connecting Line */
+.timeline-line {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 9px; /* centered relative to 20px node width */
+  width: 2px;
+  background-color: var(--border);
+  transition: background-color var(--transition-normal);
+}
+
+@media (min-width: 768px) {
+  .timeline-line {
+    left: 14px; /* centered relative to 30px node width */
+  }
+}
+
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.timeline-item {
+  position: relative;
+  width: 100%;
+}
+
+/* Timeline Bullet Node */
+.timeline-node {
+  position: absolute;
+  left: -35px;
+  top: 24px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .timeline-node {
+    left: -50px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.node-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--accent-primary);
+  border: 2px solid var(--bg-secondary);
+  box-shadow: 0 0 0 4px var(--border);
+  transition: all var(--transition-fast);
+}
+
+@media (min-width: 768px) {
+  .node-dot {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.timeline-item:hover .node-dot {
+  background-color: var(--accent-secondary);
+  transform: scale(1.2);
+  box-shadow: 0 0 0 6px var(--border);
+}
+
+/* Content Card styling overrides */
+.timeline-content {
+  padding: var(--spacing-md);
+  margin-left: 0;
+}
+
+.timeline-date {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  margin-bottom: 0.35rem;
+}
+
+.timeline-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.15rem;
+}
+
+.timeline-subtitle {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--accent-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.timeline-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}

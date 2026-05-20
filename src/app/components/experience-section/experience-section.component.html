@@ -1,0 +1,40 @@
+<section id="experience" class="section-full experience-section">
+  <div class="container">
+    <!-- Section Title -->
+    <div class="section-title-group" appScrollReveal animationClass="reveal-fade-up">
+      <span class="section-subtitle">{{ 'EXPERIENCE.SUBTITLE' | translate }}</span>
+      <h2 class="section-title line-draw">{{ 'EXPERIENCE.TITLE' | translate }}</h2>
+    </div>
+
+    <!-- Timeline Wrapper -->
+    <div class="timeline-container">
+      <!-- Vertical connecting line -->
+      <div class="timeline-line" appScrollReveal animationClass="reveal-fade-in"></div>
+
+      <!-- Timeline Items -->
+      <div class="timeline-list">
+        @for (item of getTimelineItems(); track item.TITLE; let idx = $index) {
+          <div 
+            class="timeline-item" 
+            appScrollReveal 
+            animationClass="reveal-fade-up" 
+            [staggerClass]="'stagger-' + (idx + 1)"
+          >
+            <!-- Bullet Point node -->
+            <div class="timeline-node">
+              <div class="node-dot"></div>
+            </div>
+
+            <!-- Content Card -->
+            <div class="timeline-content card">
+              <span class="timeline-date">{{ item.DATE }}</span>
+              <h3 class="timeline-title">{{ item.TITLE }}</h3>
+              <h4 class="timeline-subtitle">{{ item.SUB }}</h4>
+              <p class="timeline-desc">{{ item.DESC }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
