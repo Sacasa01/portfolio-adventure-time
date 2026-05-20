@@ -5,6 +5,7 @@ import { AboutSectionComponent } from '../about-section/about-section.component'
 import { ProjectsSectionComponent } from '../projects-section/projects-section.component';
 import { ExperienceSectionComponent } from '../experience-section/experience-section.component';
 import { ValuesSectionComponent } from '../values-section/values-section.component';
+import { ContactSectionComponent } from '../contact-section/contact-section.component';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,8 @@ import { ValuesSectionComponent } from '../values-section/values-section.compone
     AboutSectionComponent,
     ProjectsSectionComponent,
     ExperienceSectionComponent,
-    ValuesSectionComponent
+    ValuesSectionComponent,
+    ContactSectionComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
