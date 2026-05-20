@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://Sacasa01.github.io/portfolio-adventure-time/sitemap.xml
