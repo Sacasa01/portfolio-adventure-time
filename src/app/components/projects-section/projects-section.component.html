@@ -1,0 +1,100 @@
+<section id="projects" class="section-full projects-section">
+  <div class="container">
+    <!-- Section Title -->
+    <div class="section-title-group" appScrollReveal animationClass="reveal-fade-up">
+      <span class="section-subtitle">{{ 'PROJECTS.SUBTITLE' | translate }}</span>
+      <h2 class="section-title line-draw">{{ 'PROJECTS.TITLE' | translate }}</h2>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid-2 projects-grid">
+      @for (project of projects; track project.id; let idx = $index) {
+        <div 
+          class="card project-card" 
+          appScrollReveal 
+          animationClass="reveal-fade-up" 
+          [staggerClass]="'stagger-' + (idx + 1)"
+        >
+          <!-- Project Visual Container -->
+          <div class="project-visual">
+            <picture>
+              <source [srcset]="project.image.replace('.jpg', '.webp')" type="image/webp">
+              <img [src]="project.image" [alt]="'PROJECTS.ITEMS.' + project.id + '.TITLE' | translate" class="project-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              
+              <!-- SVG Fallbacks based on icon type (AT/Anime-inspired retro vectors) -->
+              <div class="project-placeholder">
+                <!-- SVG ecommerce -->
+                @if (project.svgIcon === 'ecommerce') {
+                  <svg viewBox="0 0 100 100" fill="none" class="proj-svg">
+                    <rect x="30" y="35" width="40" height="35" rx="4" stroke="currentColor" stroke-width="2"></rect>
+                    <path d="M40 35 V28 A10 10 0 0 1 60 28 V35" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                    <circle cx="50" cy="52" r="3" fill="var(--accent-primary)"></circle>
+                  </svg>
+                }
+                
+                <!-- SVG anime (cute stylized cartoon star/face Jake inspired) -->
+                @if (project.svgIcon === 'anime') {
+                  <svg viewBox="0 0 100 100" fill="none" class="proj-svg animate-star">
+                    <!-- Retro star -->
+                    <path d="M50 15 L60 38 L85 38 L65 54 L72 80 L50 63 L28 80 L35 54 L15 38 L40 38 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"></path>
+                    <!-- Small smiling face inside star -->
+                    <circle cx="45" cy="45" r="1.5" fill="currentColor"></circle>
+                    <circle cx="55" cy="45" r="1.5" fill="currentColor"></circle>
+                    <path d="M48 50 Q50 52 52 50" stroke="currentColor" stroke-width="1" stroke-linecap="round" fill="none"></path>
+                  </svg>
+                }
+                
+                <!-- SVG task board -->
+                @if (project.svgIcon === 'task') {
+                  <svg viewBox="0 0 100 100" fill="none" class="proj-svg">
+                    <rect x="28" y="22" width="44" height="56" rx="4" stroke="currentColor" stroke-width="2"></rect>
+                    <line x1="38" y1="36" x2="62" y2="36" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                    <line x1="38" y1="48" x2="54" y2="48" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                    <line x1="38" y1="60" x2="58" y2="60" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                    <circle cx="62" cy="48" r="2" fill="var(--accent-secondary)"></circle>
+                    <circle cx="62" cy="60" r="2" fill="var(--accent-tertiary)"></circle>
+                  </svg>
+                }
+                
+                <!-- SVG canvas -->
+                @if (project.svgIcon === 'canvas') {
+                  <svg viewBox="0 0 100 100" fill="none" class="proj-svg">
+                    <circle cx="50" cy="50" r="32" stroke="currentColor" stroke-width="2"></circle>
+                    <path d="M38 62 L62 38 M58 34 L66 42" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M33 67 L38 62 M33 67 L34 62 L38 61 L39 66 L34 67 Z" fill="currentColor"></path>
+                  </svg>
+                }
+                
+                <span class="proj-placeholder-text">public/{{ project.image }}</span>
+              </div>
+            </picture>
+
+            <!-- Hover overlay -->
+            <div class="project-overlay">
+              <div class="overlay-links">
+                <a [href]="project.liveUrl" target="_blank" class="btn btn-primary overlay-btn">
+                  {{ 'PROJECTS.VIEW_LIVE' | translate }}
+                </a>
+                <a [href]="project.githubUrl" target="_blank" class="btn btn-secondary overlay-btn">
+                  {{ 'PROJECTS.VIEW_CODE' | translate }}
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Information -->
+          <div class="project-info">
+            <h3 class="project-title">{{ 'PROJECTS.ITEMS.' + project.id + '.TITLE' | translate }}</h3>
+            <p class="project-desc">{{ 'PROJECTS.ITEMS.' + project.id + '.DESC' | translate }}</p>
+            
+            <div class="project-tech-list">
+              @for (tech of project.technologies; track tech) {
+                <span class="tag tech-tag">{{ tech }}</span>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
