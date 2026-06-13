@@ -25,23 +25,16 @@ Commit `pnpm-lock.yaml` after the first local install.
 
 ## Required assets (not in repo)
 
-| Path | Description |
-|---|---|
-| `public/images/hero-bg-640.webp` | Hero illustration, 640w |
-| `public/images/hero-bg-1024.webp` | Hero illustration, 1024w |
-| `public/images/hero-bg-1920.webp` | Hero illustration, 1920w (also OG image) |
-| `public/images/hero-bg-2560.webp` | Hero illustration, 2560w |
-| `public/images/portrait.webp` | About-section portrait (480x600) |
-| `public/cv/santiago-castro-salt-cv.pdf` | Downloadable CV |
-
-Hero art direction: dark night sky, full moon, stars, green meadow, geodesic domes with warm
-amber lighting, treehouse, fireflies — Studio Ghibli aesthetic.
+| Path                                    | Description                                |
+| --------------------------------------- | ------------------------------------------ |
+| `public/images/portrait.webp`           | Hero background and About-section portrait |
+| `public/cv/santiago-castro-salt-cv.pdf` | Downloadable CV                            |
 
 ## Configuration
 
 1. **Contact form**: replace `web3formsKey` in `src/data/site.ts` with your free key from
    [web3forms.com](https://web3forms.com). This is the only secret-like value in the project.
-2. **Deploy target**: `astro.config.mjs` assumes a GitHub *user* page
+2. **Deploy target**: `astro.config.mjs` assumes a GitHub _user_ page
    (`santiagocastrosalt.github.io`). For a project page set `base` and prefix absolute asset URLs.
 3. The `.github/workflows/deploy.yml` workflow runs when this repo is pushed/mirrored to GitHub
    (Settings → Pages → Source: GitHub Actions).

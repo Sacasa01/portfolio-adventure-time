@@ -8,23 +8,42 @@ const stats = [
   { value: 3, suffix: '', key: 'about.stat4' },
 ];
 ---
+
 <section id="about" class="section">
   <h2 class="section-title" data-reveal data-i18n="about.title">{t('about.title')}</h2>
   <div class="grid items-center gap-10 md:grid-cols-[2fr_3fr]">
     <div data-reveal class="card relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden">
-      <img src={`${base}/images/portrait.webp`} alt="Portrait of Santiago Castro Salt" width="480" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover" />
+      <img
+        src={`${base}/images/portrait.webp`}
+        alt="Portrait of Santiago Castro Salt"
+        width="480"
+        height="600"
+        loading="lazy"
+        decoding="async"
+        class="h-full w-full object-cover"
+      />
       <div class="absolute inset-0 ring-1 ring-inset ring-accent/30" aria-hidden="true"></div>
     </div>
     <div data-reveal>
       <p class="text-lg leading-relaxed text-txt-2" data-i18n="about.p1">{t('about.p1')}</p>
       <p class="mt-4 text-lg leading-relaxed text-txt-2" data-i18n="about.p2">{t('about.p2')}</p>
       <dl class="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-4">
-        {stats.map((s) => (
-          <div class="text-center">
-            <dd class="font-heading text-3xl font-bold text-accent" data-count={s.value} data-suffix={s.suffix}>0</dd>
-            <dt class="mt-1 text-xs text-txt-3" data-i18n={s.key}>{t(s.key)}</dt>
-          </div>
-        ))}
+        {
+          stats.map((s) => (
+            <div class="text-center">
+              <dd
+                class="font-heading text-3xl font-bold text-accent"
+                data-count={s.value}
+                data-suffix={s.suffix}
+              >
+                0
+              </dd>
+              <dt class="mt-1 text-xs text-txt-3" data-i18n={s.key}>
+                {t(s.key)}
+              </dt>
+            </div>
+          ))
+        }
       </dl>
     </div>
   </div>

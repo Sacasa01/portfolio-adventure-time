@@ -1,5 +1,15 @@
 {
-  "nav": { "about": "About", "experience": "Experience", "projects": "Projects", "skills": "Skills", "education": "Education", "contact": "Contact", "menu": "Open menu", "close": "Close menu" },
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "education": "Education",
+    "certifications": "Certifications",
+    "contact": "Contact",
+    "menu": "Open menu",
+    "close": "Close menu"
+  },
   "hero": {
     "greeting": "Hi, I'm",
     "roles": ["Full-Stack Developer", "AI Engineer", "Cloud Architect"],
@@ -55,10 +65,29 @@
     "tools": "Cloud & Tools"
   },
   "edu": {
-    "title": "Education & Certifications",
-    "bsc": { "name": "BSc (Hons) Computer Science", "org": "Canterbury Christ Church University \u00b7 via MSMK, Madrid", "date": "2026 \u2013 2027", "desc": "AI, Cybersecurity & Cloud. AWS TensorFlow deployments." },
-    "hnd": { "name": "HND Web Application Development (DAW)", "org": "La Florida Universitaria, Valencia", "date": "2024 \u2013 2026", "desc": "Full-stack web engineering: backend, frontend, databases and deployment." },
-    "aws": { "name": "AWS Certified Cloud Practitioner", "org": "Amazon Web Services", "date": "2025", "desc": "Cloud fundamentals, architecture and AWS core services.", "badge": "Certified" }
+    "title": "Education",
+    "bsc": {
+      "name": "Bachelor (Hons) Computer Science",
+      "org": "Canterbury Christ Church University \u00b7 via MSMK, Madrid",
+      "date": "2026 \u2013 2027",
+      "desc": "AI, Cybersecurity & Cloud. AWS TensorFlow deployments."
+    },
+    "hnd": {
+      "name": "TS Desarrollo de Aplicaciones Web (DAW)",
+      "org": "La Florida Universitaria, Valencia",
+      "date": "2024 \u2013 2026",
+      "desc": "Full-stack web engineering: backend, frontend, databases and deployment."
+    }
+  },
+  "cert": {
+    "title": "Certifications",
+    "aws": {
+      "name": "AWS Certified Cloud Practitioner",
+      "org": "Amazon Web Services",
+      "date": "2025",
+      "desc": "Cloud fundamentals, architecture and AWS core services.",
+      "badge": "Certified"
+    }
   },
   "contact": {
     "title": "Get In Touch",

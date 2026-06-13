@@ -1,5 +1,14 @@
-interface GraphNode { id: string; label: string; x: number; y: number; g: string }
-interface Graph { nodes: GraphNode[]; edges: [string, string][] }
+interface GraphNode {
+  id: string;
+  label: string;
+  x: number;
+  y: number;
+  g: string;
+}
+interface Graph {
+  nodes: GraphNode[];
+  edges: [string, string][];
+}
 
 export function initConstellation(canvas: HTMLCanvasElement | null, graph: Graph): void {
   if (!canvas) return;
