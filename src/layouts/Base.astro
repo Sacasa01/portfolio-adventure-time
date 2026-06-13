@@ -15,7 +15,8 @@ const {
   description = SITE.description,
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const ogImage = new URL('/images/hero-bg-1920.webp', Astro.site);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const ogImage = new URL(`${base}/images/hero-bg-1920.webp`, Astro.site);
 const jsonLd = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'Person',
@@ -38,7 +39,7 @@ const jsonLd = JSON.stringify({
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
     <meta name="theme-color" content="#0A0A0F" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
@@ -52,8 +53,8 @@ const jsonLd = JSON.stringify({
     <link
       rel="preload"
       as="image"
-      href="/images/hero-bg-1920.webp"
-      imagesrcset="/images/hero-bg-640.webp 640w, /images/hero-bg-1024.webp 1024w, /images/hero-bg-1920.webp 1920w, /images/hero-bg-2560.webp 2560w"
+      href={`${base}/images/hero-bg-1920.webp`}
+      imagesrcset={`${base}/images/hero-bg-640.webp 640w, ${base}/images/hero-bg-1024.webp 1024w, ${base}/images/hero-bg-1920.webp 1920w, ${base}/images/hero-bg-2560.webp 2560w`}
       imagesizes="100vw"
     />
     <script is:inline>

@@ -1,5 +1,6 @@
 ---
 import { t } from '../utils/i18n';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const stats = [
   { value: 33, suffix: '', key: 'about.stat1' },
   { value: 14, suffix: '', key: 'about.stat2' },
@@ -11,7 +12,7 @@ const stats = [
   <h2 class="section-title" data-reveal data-i18n="about.title">{t('about.title')}</h2>
   <div class="grid items-center gap-10 md:grid-cols-[2fr_3fr]">
     <div data-reveal class="card relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden">
-      <img src="/images/portrait.webp" alt="Portrait of Santiago Castro Salt" width="480" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover" />
+      <img src={`${base}/images/portrait.webp`} alt="Portrait of Santiago Castro Salt" width="480" height="600" loading="lazy" decoding="async" class="h-full w-full object-cover" />
       <div class="absolute inset-0 ring-1 ring-inset ring-accent/30" aria-hidden="true"></div>
     </div>
     <div data-reveal>

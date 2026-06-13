@@ -7,6 +7,7 @@ import sitemap from '@astrojs/sitemap';
 // absolute asset URLs (/images/..., /cv/...) accordingly.
 export default defineConfig({
   site: 'https://santiagocastrosalt.github.io',
+  base: '/portfolio-adventure-time',
   integrations: [sitemap()],
   vite: { plugins: [tailwindcss()] },
 });
