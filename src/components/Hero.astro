@@ -1,0 +1,40 @@
+---
+import { t } from '../utils/i18n';
+---
+<section id="hero" class="relative flex h-svh min-h-[640px] items-center justify-center overflow-hidden">
+  <div id="hero-img" class="absolute inset-0 -z-10 h-[118%] will-change-transform">
+    <img
+      src="/images/hero-bg-1920.webp"
+      srcset="/images/hero-bg-640.webp 640w, /images/hero-bg-1024.webp 1024w, /images/hero-bg-1920.webp 1920w, /images/hero-bg-2560.webp 2560w"
+      sizes="100vw"
+      width="1920"
+      height="1080"
+      alt=""
+      role="presentation"
+      fetchpriority="high"
+      decoding="async"
+      class="h-full w-full object-cover"
+    />
+  </div>
+  <div class="absolute inset-0 -z-[5]" style="background: var(--hero-overlay);" aria-hidden="true"></div>
+  <canvas id="fireflies" class="pointer-events-none absolute inset-0 h-full w-full" aria-hidden="true"></canvas>
+
+  <div class="relative z-10 px-5 text-center">
+    <p data-stagger class="mb-3 font-heading text-lg text-amber-200/90" data-i18n="hero.greeting">{t('hero.greeting')}</p>
+    <h1 data-stagger class="font-heading font-bold tracking-tight text-white drop-shadow-[0_2px_18px_rgba(0,0,0,.55)]" style="font-size: clamp(2.5rem, 8vw, 5.5rem);">
+      Santiago Castro Salt
+    </h1>
+    <p data-stagger class="mt-4 font-heading text-amber-100/95 drop-shadow-[0_1px_10px_rgba(0,0,0,.6)]" style="font-size: clamp(1.1rem, 3vw, 1.6rem);">
+      <span id="typed-role">Full-Stack Developer</span><span class="typed-caret" aria-hidden="true"></span>
+    </p>
+    <p data-stagger class="mx-auto mt-4 max-w-xl text-slate-200/90 drop-shadow-[0_1px_8px_rgba(0,0,0,.6)]" data-i18n="hero.tagline">{t('hero.tagline')}</p>
+    <div data-stagger class="mt-8 flex flex-wrap justify-center gap-4">
+      <a href="#projects" class="btn btn-primary" data-i18n="hero.viewWork">{t('hero.viewWork')}</a>
+      <a href="/cv/santiago-castro-salt-cv.pdf" download class="btn btn-ghost !border-amber-200 !text-amber-100 hover:!bg-white/10" data-i18n="hero.downloadCV">{t('hero.downloadCV')}</a>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-indicator absolute bottom-8 left-1/2 z-10 flex h-11 w-11 -translate-x-1/2 items-center justify-center text-amber-100" aria-label={t('hero.scroll')}>
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14m-7-7 7 7 7-7"></path></svg>
+  </a>
+</section>
