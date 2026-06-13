@@ -1,59 +1,47 @@
-# PortfolioAdventureTime
+# Santiago Castro Salt — Developer Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.11.
+Awwwards-style personal portfolio built with **Astro**, **Tailwind CSS v4** and **GSAP (ScrollTrigger)**.
+Dark/light theming via CSS custom properties, JSON-based EN/ES i18n, firefly particle hero,
+interactive skill constellation, Lighthouse-95+ performance budget.
 
-## Development server
+## Stack
 
-To start a local development server, run:
+- Astro (static output, View Transitions)
+- Tailwind CSS v4 via `@tailwindcss/vite`
+- GSAP + ScrollTrigger
+- Inter Variable + Space Grotesk Variable (self-hosted, `font-display: swap`)
+- pnpm · GitHub Pages via GitHub Actions
 
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Development
 
 ```bash
-ng generate component component-name
+pnpm install
+pnpm dev      # http://localhost:4321
+pnpm build    # output in dist/
+pnpm preview
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Commit `pnpm-lock.yaml` after the first local install.
 
-```bash
-ng generate --help
-```
+## Required assets (not in repo)
 
-## Building
+| Path | Description |
+|---|---|
+| `public/images/hero-bg-640.webp` | Hero illustration, 640w |
+| `public/images/hero-bg-1024.webp` | Hero illustration, 1024w |
+| `public/images/hero-bg-1920.webp` | Hero illustration, 1920w (also OG image) |
+| `public/images/hero-bg-2560.webp` | Hero illustration, 2560w |
+| `public/images/portrait.webp` | About-section portrait (480x600) |
+| `public/cv/santiago-castro-salt-cv.pdf` | Downloadable CV |
 
-To build the project run:
+Hero art direction: dark night sky, full moon, stars, green meadow, geodesic domes with warm
+amber lighting, treehouse, fireflies — Studio Ghibli aesthetic.
 
-```bash
-ng build
-```
+## Configuration
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. **Contact form**: replace `web3formsKey` in `src/data/site.ts` with your free key from
+   [web3forms.com](https://web3forms.com). This is the only secret-like value in the project.
+2. **Deploy target**: `astro.config.mjs` assumes a GitHub *user* page
+   (`santiagocastrosalt.github.io`). For a project page set `base` and prefix absolute asset URLs.
+3. The `.github/workflows/deploy.yml` workflow runs when this repo is pushed/mirrored to GitHub
+   (Settings → Pages → Source: GitHub Actions).
