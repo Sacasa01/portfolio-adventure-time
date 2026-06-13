@@ -1,0 +1,79 @@
+{
+  "nav": { "about": "Sobre m\u00ed", "experience": "Experiencia", "projects": "Proyectos", "skills": "Habilidades", "education": "Formaci\u00f3n", "contact": "Contacto", "menu": "Abrir men\u00fa", "close": "Cerrar men\u00fa" },
+  "hero": {
+    "greeting": "Hola, soy",
+    "roles": ["Desarrollador Full-Stack", "Ingeniero de IA", "Arquitecto Cloud"],
+    "tagline": "Construyo software de producci\u00f3n impulsado por IA con impacto real.",
+    "viewWork": "Ver mi trabajo",
+    "downloadCV": "Descargar CV",
+    "scroll": "Desliza para explorar"
+  },
+  "about": {
+    "title": "Sobre m\u00ed",
+    "p1": "Soy desarrollador web full-stack y estudiante de \u00faltimo a\u00f1o de Inform\u00e1tica (BSc Hons) en Valencia, Espa\u00f1a, especializado en aplicaciones con IA, ingenier\u00eda backend e infraestructura cloud.",
+    "p2": "He desarrollado software de producci\u00f3n en tecnolog\u00eda sanitaria y digitalizaci\u00f3n industrial, con foco en arquitectura limpia, integraci\u00f3n de modelos e impacto real medible.",
+    "stat1": "Endpoints REST publicados",
+    "stat2": "Tablas de BD dise\u00f1adas",
+    "stat3": "M\u00e1s r\u00e1pido en descargas masivas",
+    "stat4": "Idiomas hablados"
+  },
+  "exp": {
+    "title": "Experiencia",
+    "fertoolity": {
+      "role": "Desarrollador de IA",
+      "org": "Fertoolity \u00b7 Hospital La Fe, Valencia",
+      "date": "Mar 2026 \u2013 Jun 2026",
+      "points": [
+        "Pipelines de deep learning con PyTorch y MONAI (NVIDIA Clara) para segmentaci\u00f3n de imagen m\u00e9dica.",
+        "Dise\u00f1o e implementaci\u00f3n de un backend FastAPI para inferencia de modelos de IA en entorno cl\u00ednico.",
+        "Colaboraci\u00f3n directa con especialistas cl\u00ednicos para validar los modelos con necesidades diagn\u00f3sticas reales."
+      ]
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "open": "Ver detalles",
+    "close": "Cerrar",
+    "stack": "Stack tecnol\u00f3gico",
+    "fitforge": {
+      "tagline": "Plataforma fitness full-stack (TFG, ~5 meses)",
+      "desc": "SPA de fitness con esquema relacional de 14 tablas, 33 endpoints REST, autenticaci\u00f3n JWT y control de acceso por roles.",
+      "details": "FitForge es una plataforma completa de gesti\u00f3n fitness construida como TFG durante cinco meses. El backend en Symfony 7 (PHP 8.2) expone 33 endpoints REST documentados sobre un esquema MySQL normalizado de 14 tablas, asegurado con JWT y control de acceso basado en roles (RBAC). El frontend Angular usa m\u00f3dulos lazy-loaded para una carga inicial r\u00e1pida, y todo el stack est\u00e1 contenerizado con Docker para despliegues reproducibles."
+    },
+    "llm": {
+      "tagline": "Herramienta geoespacial para parcelas catastrales espa\u00f1olas (~3 meses)",
+      "desc": "Herramienta Python multihilo con descargas masivas un 90%+ m\u00e1s r\u00e1pidas, renderizada en un \u00fanico HTML portable.",
+      "details": "Legacy Land Mapper procesa datos catastrales espa\u00f1oles con Pandas y renderiza capas GeoJSON interactivas con Leaflet.js. Un descargador multihilo de 20 workers redujo el tiempo de obtenci\u00f3n masiva en m\u00e1s de un 90%. Toda la salida se compila en un \u00fanico archivo HTML portable y sin dependencias, pensado para usuarios no t\u00e9cnicos que gestionan tierras heredadas."
+    }
+  },
+  "skills": {
+    "title": "Habilidades",
+    "hint": "Pasa el cursor por la constelaci\u00f3n: las tecnolog\u00edas relacionadas se iluminan.",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "ai": "IA y Datos",
+    "tools": "Cloud y Herramientas"
+  },
+  "edu": {
+    "title": "Formaci\u00f3n y Certificaciones",
+    "bsc": { "name": "Grado (Hons) en Inform\u00e1tica", "org": "Canterbury Christ Church University \u00b7 v\u00eda MSMK, Madrid", "date": "2026 \u2013 2027", "desc": "IA, Ciberseguridad y Cloud. Despliegues de TensorFlow en AWS." },
+    "hnd": { "name": "T\u00e9cnico Superior DAW (HND)", "org": "La Florida Universitaria, Valencia", "date": "2024 \u2013 2026", "desc": "Ingenier\u00eda web full-stack: backend, frontend, bases de datos y despliegue." },
+    "aws": { "name": "AWS Certified Cloud Practitioner", "org": "Amazon Web Services", "date": "2025", "desc": "Fundamentos cloud, arquitectura y servicios principales de AWS.", "badge": "Certificado" }
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "\u00bfTienes un proyecto, una oportunidad o simplemente quieres saludar? Mi bandeja de entrada siempre est\u00e1 abierta.",
+    "location": "Desde Valencia \ud83c\uddea\ud83c\uddf8",
+    "name": "Tu nombre",
+    "email": "Tu email",
+    "message": "Tu mensaje",
+    "send": "Enviar mensaje",
+    "sending": "Enviando\u2026",
+    "success": "\u00a1Mensaje enviado! Te responder\u00e9 pronto.",
+    "fail": "Algo ha fallado. Escr\u00edbeme directamente por email.",
+    "errName": "Introduce tu nombre.",
+    "errEmail": "Introduce un email v\u00e1lido.",
+    "errMessage": "Escribe un mensaje (m\u00ednimo 10 caracteres)."
+  },
+  "footer": { "built": "Dise\u00f1ado y desarrollado por Santiago Castro Salt", "top": "Volver arriba" }
+}

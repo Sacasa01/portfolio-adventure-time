@@ -1,0 +1,79 @@
+{
+  "nav": { "about": "About", "experience": "Experience", "projects": "Projects", "skills": "Skills", "education": "Education", "contact": "Contact", "menu": "Open menu", "close": "Close menu" },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "roles": ["Full-Stack Developer", "AI Engineer", "Cloud Architect"],
+    "tagline": "I build AI-driven, production-grade software with real-world impact.",
+    "viewWork": "View My Work",
+    "downloadCV": "Download CV",
+    "scroll": "Scroll to explore"
+  },
+  "about": {
+    "title": "About Me",
+    "p1": "I'm a full-stack web developer and final-year Computer Science student (BSc Hons) based in Valencia, Spain, specialising in AI-driven applications, backend engineering and cloud infrastructure.",
+    "p2": "I've shipped production-grade software across healthcare tech and industrial digitalisation, with a focus on clean architecture, model integration and measurable real-world impact.",
+    "stat1": "REST endpoints shipped",
+    "stat2": "Database tables designed",
+    "stat3": "Faster bulk geodata fetches",
+    "stat4": "Languages spoken"
+  },
+  "exp": {
+    "title": "Experience",
+    "fertoolity": {
+      "role": "AI Developer",
+      "org": "Fertoolity \u00b7 Hospital La Fe, Valencia",
+      "date": "Mar 2026 \u2013 Jun 2026",
+      "points": [
+        "Built deep learning pipelines with PyTorch and MONAI (NVIDIA Clara) for medical imaging segmentation.",
+        "Designed and implemented a FastAPI backend serving AI model inference in a clinical context.",
+        "Collaborated directly with clinical specialists to validate models against real diagnostic needs."
+      ]
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "open": "View details",
+    "close": "Close",
+    "stack": "Tech breakdown",
+    "fitforge": {
+      "tagline": "Full-stack fitness platform (Final Degree Project, ~5 months)",
+      "desc": "A fitness SPA with a 14-table relational schema, 33 REST endpoints, JWT auth and role-based access control.",
+      "details": "FitForge is a complete fitness management platform built as my final degree project over five months. The Symfony 7 backend (PHP 8.2) exposes 33 documented REST endpoints over a normalised 14-table MySQL schema, secured with JWT authentication and role-based access control. The Angular frontend uses lazy-loaded feature modules for fast initial paint, and the whole stack is containerised with Docker for reproducible deployments."
+    },
+    "llm": {
+      "tagline": "Geospatial analysis tool for Spanish land parcels (~3 months)",
+      "desc": "Multi-threaded Python tool achieving 90%+ faster bulk cadastral fetches, rendered to a single portable HTML map.",
+      "details": "Legacy Land Mapper ingests Spanish cadastral parcel data, processes it with Pandas and renders interactive GeoJSON layers with Leaflet.js. A 20-worker multi-threaded fetcher cut bulk retrieval time by more than 90%. The entire output compiles into one portable, dependency-free HTML file that runs anywhere, designed for non-technical users managing inherited land."
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "hint": "Hover the constellation: related technologies light up.",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "ai": "AI & Data",
+    "tools": "Cloud & Tools"
+  },
+  "edu": {
+    "title": "Education & Certifications",
+    "bsc": { "name": "BSc (Hons) Computer Science", "org": "Canterbury Christ Church University \u00b7 via MSMK, Madrid", "date": "2026 \u2013 2027", "desc": "AI, Cybersecurity & Cloud. AWS TensorFlow deployments." },
+    "hnd": { "name": "HND Web Application Development (DAW)", "org": "La Florida Universitaria, Valencia", "date": "2024 \u2013 2026", "desc": "Full-stack web engineering: backend, frontend, databases and deployment." },
+    "aws": { "name": "AWS Certified Cloud Practitioner", "org": "Amazon Web Services", "date": "2025", "desc": "Cloud fundamentals, architecture and AWS core services.", "badge": "Certified" }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Have a project, an opportunity, or just want to say hi? My inbox is always open.",
+    "location": "Based in Valencia \ud83c\uddea\ud83c\uddf8",
+    "name": "Your name",
+    "email": "Your email",
+    "message": "Your message",
+    "send": "Send Message",
+    "sending": "Sending\u2026",
+    "success": "Message sent! I'll get back to you soon.",
+    "fail": "Something went wrong. Please email me directly.",
+    "errName": "Please enter your name.",
+    "errEmail": "Please enter a valid email.",
+    "errMessage": "Please write a message (10+ characters)."
+  },
+  "footer": { "built": "Designed & Built by Santiago Castro Salt", "top": "Back to top" }
+}
