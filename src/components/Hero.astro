@@ -1,11 +1,12 @@
 ---
 import { t } from '../utils/i18n';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <section id="hero" class="relative flex h-svh min-h-[640px] items-center justify-center overflow-hidden">
   <div id="hero-img" class="absolute inset-0 -z-10 h-[118%] will-change-transform">
     <img
-      src="/images/hero-bg-1920.webp"
-      srcset="/images/hero-bg-640.webp 640w, /images/hero-bg-1024.webp 1024w, /images/hero-bg-1920.webp 1920w, /images/hero-bg-2560.webp 2560w"
+      src={`${base}/images/hero-bg-1920.webp`}
+      srcset={`${base}/images/hero-bg-640.webp 640w, ${base}/images/hero-bg-1024.webp 1024w, ${base}/images/hero-bg-1920.webp 1920w, ${base}/images/hero-bg-2560.webp 2560w`}
       sizes="100vw"
       width="1920"
       height="1080"
@@ -30,7 +31,7 @@ import { t } from '../utils/i18n';
     <p data-stagger class="mx-auto mt-4 max-w-xl text-slate-200/90 drop-shadow-[0_1px_8px_rgba(0,0,0,.6)]" data-i18n="hero.tagline">{t('hero.tagline')}</p>
     <div data-stagger class="mt-8 flex flex-wrap justify-center gap-4">
       <a href="#projects" class="btn btn-primary" data-i18n="hero.viewWork">{t('hero.viewWork')}</a>
-      <a href="/cv/santiago-castro-salt-cv.pdf" download class="btn btn-ghost !border-amber-200 !text-amber-100 hover:!bg-white/10" data-i18n="hero.downloadCV">{t('hero.downloadCV')}</a>
+      <a href={`${base}/cv/santiago-castro-salt-cv.pdf`} download class="btn btn-ghost !border-amber-200 !text-amber-100 hover:!bg-white/10" data-i18n="hero.downloadCV">{t('hero.downloadCV')}</a>
     </div>
   </div>
 
