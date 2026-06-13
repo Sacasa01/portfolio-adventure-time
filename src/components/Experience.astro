@@ -1,0 +1,27 @@
+---
+import { t } from '../utils/i18n';
+---
+<section id="experience" class="section">
+  <h2 class="section-title" data-reveal data-i18n="exp.title">{t('exp.title')}</h2>
+  <div class="timeline pl-10 md:pl-0">
+    <article class="timeline-item relative md:w-1/2 md:pr-12">
+      <span class="timeline-dot" aria-hidden="true"></span>
+      <div class="card p-6">
+        <p class="text-xs font-semibold uppercase tracking-wider text-accent" data-i18n="exp.fertoolity.date">{t('exp.fertoolity.date')}</p>
+        <h3 class="mt-1 font-heading text-xl font-bold" data-i18n="exp.fertoolity.role">{t('exp.fertoolity.role')}</h3>
+        <p class="text-sm text-txt-2" data-i18n="exp.fertoolity.org">{t('exp.fertoolity.org')}</p>
+        <ul class="mt-4 space-y-2 text-sm text-txt-2">
+          {[0, 1, 2].map((i) => (
+            <li class="flex gap-2">
+              <span class="mt-1 text-accent" aria-hidden="true">▸</span>
+              <span data-i18n={`exp.fertoolity.points.${i}`}>{t(`exp.fertoolity.points.${i}`)}</span>
+            </li>
+          ))}
+        </ul>
+        <div class="mt-4 flex flex-wrap gap-2">
+          {['PyTorch', 'MONAI', 'NVIDIA Clara', 'FastAPI'].map((b) => <span class="badge">{b}</span>)}
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

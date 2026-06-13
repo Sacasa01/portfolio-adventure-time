@@ -1,0 +1,38 @@
+---
+import { t } from '../utils/i18n';
+const links = ['about', 'experience', 'projects', 'skills', 'education', 'contact'];
+---
+<header id="navbar" class="glass fixed inset-x-0 top-0 z-50">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3" aria-label="Main">
+    <a href="#hero" class="font-heading text-xl font-bold tracking-tight text-accent" aria-label="Santiago Castro Salt, home">SC</a>
+
+    <ul class="hidden items-center gap-6 text-sm font-medium text-txt-2 md:flex">
+      {links.map((l) => (
+        <li><a class="nav-link" href={`#${l}`} data-i18n={`nav.${l}`}>{t(`nav.${l}`)}</a></li>
+      ))}
+    </ul>
+
+    <div class="flex items-center gap-2">
+      <button id="lang-toggle" class="flex h-11 w-11 items-center justify-center rounded-full text-sm font-bold text-txt-2 hover:text-accent" aria-label="Switch language / Cambiar idioma">
+        <span class="lang-label">ES</span>
+      </button>
+      <button id="theme-toggle" class="flex h-11 w-11 items-center justify-center rounded-full text-txt-2 hover:text-accent" aria-label="Toggle theme">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <g class="dark-icon hidden"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></g>
+        <path class="light-icon" d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+        </svg>
+      </button>
+      <button id="hamburger" class="flex h-11 w-11 items-center justify-center text-txt-1 md:hidden" aria-label={t('nav.menu')} aria-expanded="false" aria-controls="mobile-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class="fixed inset-0 z-40 flex items-center justify-center bg-bg-0/95 backdrop-blur-xl md:hidden" aria-hidden="true">
+    <ul class="flex flex-col items-center gap-6 font-heading text-2xl font-semibold">
+      {links.map((l) => (
+        <li><a class="nav-link" href={`#${l}`} data-i18n={`nav.${l}`}>{t(`nav.${l}`)}</a></li>
+      ))}
+    </ul>
+  </div>
+</header>
