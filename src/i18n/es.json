@@ -1,5 +1,15 @@
 {
-  "nav": { "about": "Sobre m\u00ed", "experience": "Experiencia", "projects": "Proyectos", "skills": "Habilidades", "education": "Formaci\u00f3n", "contact": "Contacto", "menu": "Abrir men\u00fa", "close": "Cerrar men\u00fa" },
+  "nav": {
+    "about": "Sobre m\u00ed",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "education": "Formaci\u00f3n",
+    "certifications": "Certificaciones",
+    "contact": "Contacto",
+    "menu": "Abrir men\u00fa",
+    "close": "Cerrar men\u00fa"
+  },
   "hero": {
     "greeting": "Hola, soy",
     "roles": ["Desarrollador Full-Stack", "Ingeniero de IA", "Arquitecto Cloud"],
@@ -55,10 +65,29 @@
     "tools": "Cloud y Herramientas"
   },
   "edu": {
-    "title": "Formaci\u00f3n y Certificaciones",
-    "bsc": { "name": "Grado (Hons) en Inform\u00e1tica", "org": "Canterbury Christ Church University \u00b7 v\u00eda MSMK, Madrid", "date": "2026 \u2013 2027", "desc": "IA, Ciberseguridad y Cloud. Despliegues de TensorFlow en AWS." },
-    "hnd": { "name": "T\u00e9cnico Superior DAW (HND)", "org": "La Florida Universitaria, Valencia", "date": "2024 \u2013 2026", "desc": "Ingenier\u00eda web full-stack: backend, frontend, bases de datos y despliegue." },
-    "aws": { "name": "AWS Certified Cloud Practitioner", "org": "Amazon Web Services", "date": "2025", "desc": "Fundamentos cloud, arquitectura y servicios principales de AWS.", "badge": "Certificado" }
+    "title": "Formaci\u00f3n",
+    "bsc": {
+      "name": "Ingenier\u00eda Inform\u00e1tica",
+      "org": "Canterbury Christ Church University \u00b7 v\u00eda MSMK, Madrid",
+      "date": "2026 \u2013 2027",
+      "desc": "IA, Ciberseguridad y Cloud. Despliegues de TensorFlow en AWS."
+    },
+    "hnd": {
+      "name": "TS Desarrollo de Aplicaciones Web (DAW)",
+      "org": "La Florida Universitaria, Valencia",
+      "date": "2024 \u2013 2026",
+      "desc": "Ingenier\u00eda web full-stack: backend, frontend, bases de datos y despliegue."
+    }
+  },
+  "cert": {
+    "title": "Certificaciones",
+    "aws": {
+      "name": "AWS Certified Cloud Practitioner",
+      "org": "Amazon Web Services",
+      "date": "2025",
+      "desc": "Fundamentos cloud, arquitectura y servicios principales de AWS.",
+      "badge": "Certificado"
+    }
   },
   "contact": {
     "title": "Contacto",
@@ -75,5 +104,8 @@
     "errEmail": "Introduce un email v\u00e1lido.",
     "errMessage": "Escribe un mensaje (m\u00ednimo 10 caracteres)."
   },
-  "footer": { "built": "Dise\u00f1ado y desarrollado por Santiago Castro Salt", "top": "Volver arriba" }
+  "footer": {
+    "built": "Dise\u00f1ado y desarrollado por Santiago Castro Salt",
+    "top": "Volver arriba"
+  }
 }

@@ -107,7 +107,11 @@ function initAnimations(): void {
   gsap
     .timeline()
     .from('#navbar', { y: -80, opacity: 0, duration: 0.6, ease: 'power3.out' })
-    .from('#hero [data-stagger]', { y: 40, opacity: 0, duration: 0.8, stagger: 0.12, ease: 'power3.out' }, '-=0.2')
+    .from(
+      '#hero [data-stagger]',
+      { y: 40, opacity: 0, duration: 0.8, stagger: 0.12, ease: 'power3.out' },
+      '-=0.2',
+    )
     .from('.scroll-indicator', { opacity: 0, duration: 0.6 }, '-=0.2');
 
   gsap.to('#hero-img', {
@@ -150,15 +154,6 @@ function initAnimations(): void {
       },
     });
   });
-
-  gsap.utils.toArray<HTMLElement>('.skill-bar > span').forEach((bar) => {
-    gsap.to(bar, {
-      width: `${bar.dataset.level}%`,
-      duration: 1.2,
-      ease: 'power3.out',
-      scrollTrigger: { trigger: bar, start: 'top 92%' },
-    });
-  });
 }
 
 /* ---------- Typewriter ---------- */
@@ -193,20 +188,6 @@ function initTyping(): void {
 
 /* ---------- Project tilt + modal ---------- */
 function initProjects(): void {
-  if (matchMedia('(hover: hover)').matches && !reduced) {
-    document.querySelectorAll<HTMLElement>('.project-card').forEach((card) => {
-      card.addEventListener('pointermove', (e) => {
-        const r = card.getBoundingClientRect();
-        const rx = ((e.clientY - r.top) / r.height - 0.5) * -8;
-        const ry = ((e.clientX - r.left) / r.width - 0.5) * 8;
-        card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-4px)`;
-      });
-      card.addEventListener('pointerleave', () => {
-        card.style.transform = '';
-      });
-    });
-  }
-
   const modal = document.getElementById('project-modal') as HTMLDialogElement | null;
   if (!modal) return;
   document.querySelectorAll<HTMLElement>('[data-open-project]').forEach((btn) => {
@@ -305,9 +286,9 @@ function initContact(): void {
 function initFooter(): void {
   const year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
-  document.getElementById('back-to-top')?.addEventListener('click', () =>
-    scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' }),
-  );
+  document
+    .getElementById('back-to-top')
+    ?.addEventListener('click', () => scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' }));
 }
 
 /* ---------- Boot ---------- */

@@ -1,7 +1,6 @@
 export const SITE = {
   name: 'Santiago Castro Salt',
   email: 'santiagocsdev@gmail.com',
-  phone: '+34 654 763 788',
   location: 'Valencia, Spain',
   linkedin: 'https://linkedin.com/in/santiago-castro-salt',
   github: 'https://github.com/santiagocastrosalt',
@@ -9,7 +8,7 @@ export const SITE = {
   description:
     'Full-stack web developer & final-year CS student specialising in AI-driven apps, backend engineering and cloud infrastructure.',
   // Get a free key at https://web3forms.com - the ONLY external config needed.
-  web3formsKey: 'WEB3FORMS-ACCESS-KEY-GOES-HERE',
+  web3formsKey: '5534c173-ae2e-4201-9123-0c06f4ee56d6',
 };
 
 export interface Project {
@@ -36,46 +35,25 @@ export const PROJECTS: Project[] = [
 
 export interface SkillGroup {
   key: 'frontend' | 'backend' | 'ai' | 'tools';
-  skills: { name: string; level: number }[];
+  skills: string[];
 }
 
 export const SKILL_GROUPS: SkillGroup[] = [
   {
     key: 'frontend',
-    skills: [
-      { name: 'JavaScript', level: 90 },
-      { name: 'TypeScript', level: 85 },
-      { name: 'Angular', level: 85 },
-      { name: 'HTML/CSS', level: 90 },
-    ],
+    skills: ['JavaScript', 'TypeScript', 'Angular', 'HTML/CSS'],
   },
   {
     key: 'backend',
-    skills: [
-      { name: 'PHP / Symfony', level: 88 },
-      { name: 'Python / FastAPI', level: 85 },
-      { name: 'Node.js', level: 75 },
-      { name: 'SQL (MySQL/PostgreSQL)', level: 85 },
-      { name: 'Java', level: 70 },
-    ],
+    skills: ['PHP / Symfony', 'Python / FastAPI', 'Node.js', 'SQL (MySQL/PostgreSQL)', 'Java'],
   },
   {
     key: 'ai',
-    skills: [
-      { name: 'PyTorch', level: 80 },
-      { name: 'MONAI / NVIDIA Clara', level: 75 },
-      { name: 'TensorFlow', level: 70 },
-      { name: 'scikit-learn', level: 75 },
-    ],
+    skills: ['PyTorch', 'MONAI / NVIDIA Clara', 'TensorFlow', 'scikit-learn'],
   },
   {
     key: 'tools',
-    skills: [
-      { name: 'AWS', level: 80 },
-      { name: 'Docker', level: 85 },
-      { name: 'Git', level: 90 },
-      { name: 'REST API Design', level: 90 },
-    ],
+    skills: ['AWS', 'Docker', 'Git', 'REST API Design'],
   },
 ];
 
@@ -98,10 +76,23 @@ export const CONSTELLATION = {
     { id: 'git', label: 'Git', x: 0.32, y: 0.88, g: 'tools' },
   ],
   edges: [
-    ['ts', 'angular'], ['js', 'angular'], ['ts', 'js'], ['angular', 'symfony'],
-    ['php', 'symfony'], ['symfony', 'mysql'], ['symfony', 'docker'],
-    ['python', 'fastapi'], ['python', 'pytorch'], ['pytorch', 'monai'],
-    ['python', 'tf'], ['tf', 'aws'], ['fastapi', 'docker'], ['docker', 'aws'],
-    ['mysql', 'docker'], ['git', 'docker'], ['js', 'git'], ['fastapi', 'pytorch'],
+    ['ts', 'angular'],
+    ['js', 'angular'],
+    ['ts', 'js'],
+    ['angular', 'symfony'],
+    ['php', 'symfony'],
+    ['symfony', 'mysql'],
+    ['symfony', 'docker'],
+    ['python', 'fastapi'],
+    ['python', 'pytorch'],
+    ['pytorch', 'monai'],
+    ['python', 'tf'],
+    ['tf', 'aws'],
+    ['fastapi', 'docker'],
+    ['docker', 'aws'],
+    ['mysql', 'docker'],
+    ['git', 'docker'],
+    ['js', 'git'],
+    ['fastapi', 'pytorch'],
   ] as [string, string][],
 };
